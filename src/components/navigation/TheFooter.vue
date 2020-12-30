@@ -1,7 +1,9 @@
 <template>
-  <div>
-    <h1>Footer</h1>
-  </div>
+  <footer>
+    <div>
+      Footer
+    </div>
+  </footer>
 </template>
 
 <script>
@@ -11,8 +13,22 @@ export default {
 </script>
 
 <style scoped>
-div{
-  padding-left: 50%;
-  background-color: #582626;
+
+
+footer {
+  width: 100%;
+  height: 5rem;
+  background-color: #eed79e;
+  border: 1px solid black
 }
+div{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 </style>

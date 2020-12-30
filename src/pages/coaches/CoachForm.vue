@@ -1,5 +1,7 @@
 <template>
-
+  <div>
+    Coach Form
+  </div>
 </template>
 
 <script>

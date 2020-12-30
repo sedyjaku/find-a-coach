@@ -13,6 +13,15 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+}
+
 
 </style>

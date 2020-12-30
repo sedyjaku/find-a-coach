@@ -1,5 +1,7 @@
 <template>
-
+  <div>
+    Coach Item
+  </div>
 </template>
 
 <script>

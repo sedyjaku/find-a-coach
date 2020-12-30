@@ -1,5 +1,8 @@
 <template>
-
+  <div>
+    Coach Detail
+  </div>
+  <router-view></router-view>
 </template>
 
 <script>
