@@ -5,39 +5,48 @@ import CoachContact from '@/pages/coaches/CoachContact';
 import CoachForm from '@/pages/coaches/CoachForm';
 import RequestList from '@/pages/requests/RequestList';
 import NotFound from '@/pages/error/NotFound';
+import {
+  COACH_CONTACT_PATH,
+  COACH_DETAIL_PATH,
+  COACH_LIST_PATH,
+  COACH_REGISTER_PATH, NOT_FOUND_PATH,
+  ROOT_PATH, USER_MESSAGE_PATH
+} from '@/constants/paths';
 
 
 const router = createRouter({
   history: createWebHistory(),
   routes: [
     {
-      path: '/',
-      redirect: '/coaches'
+      path: ROOT_PATH,
+      redirect: COACH_LIST_PATH
     },
     {
-      path: '/coaches',
+      path: COACH_LIST_PATH,
       component: CoachList
     },
     {
-      path: '/coaches/:id',
+      path: COACH_DETAIL_PATH,
       component: CoachDetail,
+      props: true,
       children: [
         {
-          path: 'contact',
-          component: CoachContact
+          path: COACH_CONTACT_PATH,
+          component: CoachContact,
+          props: true,
         }
       ]
     },
     {
-      path: '/register',
+      path: COACH_REGISTER_PATH,
       component: CoachForm
     },
     {
-      path: '/requests',
+      path: USER_MESSAGE_PATH,
       component: RequestList
     },
     {
-      path: '/:notFound(.*)',
+      path: NOT_FOUND_PATH,
       component: NotFound
     }
   ]

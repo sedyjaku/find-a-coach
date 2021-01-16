@@ -9,7 +9,10 @@ import TheHeader from '@/components/navigation/TheHeader';
 import TheFooter from '@/components/navigation/TheFooter';
 export default {
   name: 'App',
-  components: { TheFooter, TheHeader }
+  components: { TheFooter, TheHeader },
+  mounted() {
+    this.$store.dispatch('coaches/fetchCoaches');
+  }
 };
 </script>
 
